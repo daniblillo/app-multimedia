@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { ActionSheetController, Platform } from '@ionic/angular';
-import {  MediaCapture,  MediaFile,  CaptureError} from '@ionic-native/media-capture/ngx';
+import { MediaCapture, MediaFile, CaptureError } from '@ionic-native/media-capture/ngx';
 import { File, FileEntry } from '@ionic-native/File/ngx';
 import { Media, MediaObject } from '@ionic-native/media/ngx';
 import { StreamingMedia } from '@ionic-native/streaming-media/ngx';
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     private photoViewer: PhotoViewer,
     private actionSheetController: ActionSheetController,
     private plt: Platform
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.plt.ready().then(() => {

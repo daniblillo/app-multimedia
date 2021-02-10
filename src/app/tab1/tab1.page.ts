@@ -38,7 +38,7 @@ export class Tab1Page implements OnInit {
     private plt: Platform,
     public alertController: AlertController,
     private camera: Camera
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.plt.ready().then(() => {
@@ -59,7 +59,7 @@ export class Tab1Page implements OnInit {
       res => {
         this.files = res;
       },
-      err => console.log('error loading files: ', err)
+      err => console.log('Error al cargar archivos: ', err)
     );
   }
   async selectMedia() {
@@ -153,7 +153,7 @@ export class Tab1Page implements OnInit {
         }
       ]
     });
-    
+
     console.log("Imagen guardada")
 
     await alert.present();
@@ -164,7 +164,7 @@ export class Tab1Page implements OnInit {
     console.log(NameCarpeta);
     console.log(DirectorioCarpeta);
     let path = 'file:///storage/emulated/0/';
-    
+
     if (DirectorioCarpeta != '') {
       this.file.checkDir(path, DirectorioCarpeta).then(
         () => {
